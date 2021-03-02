@@ -1,5 +1,6 @@
 import discord, asyncio, math, random
 from discord.ext import commands
+import os
 
 token="Njg5MDQwMTg5NDY0NjQxNjM1.Xm9Erg.FxUBp2zd4-a3eKbyb7soJoq9r1c"
 game=discord.Game("마피아")
@@ -514,4 +515,5 @@ async def game_start(ctx):
     clear()
 
         
-bot.run(token)
+access_token = os.environ['BOT_TOKEN']
+bot.run(access_token)
